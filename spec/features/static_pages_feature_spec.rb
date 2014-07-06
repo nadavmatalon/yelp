@@ -11,12 +11,11 @@ describe "Static pages >" do
 			expect(page).to have_content("Home")
 		end
 
-        it "should have the title \'Home\'" do
+        it "should have the base title" do
             visit "/static_pages/home"
-            expect(page).to have_title("#{base_title}Home")
+            expect(page).to have_title("Yelp | Home")
         end
-
-	end
+    end
 	
 	describe "About page" do
 
@@ -25,9 +24,9 @@ describe "Static pages >" do
     		expect(page).to have_content("About Us")
     	end
 
-            it "should have the title \'Yelp | About Us\'" do
+        it "should have the base title" do
             visit "/static_pages/about"
-            expect(page).to have_title("#{base_title}About Us")
+            expect(page).to have_title("Yelp | About Us")
         end
     end
 
@@ -38,9 +37,9 @@ describe "Static pages >" do
             expect(page).to have_content("Contact Us")
         end
 
-            it "should have the title \'Yelp | Contact Us\'" do
+       it "should have the base title" do
             visit "/static_pages/contact"
-            expect(page).to have_title("#{base_title}Contact Us")
+            expect(page).to have_title("Yelp | Contact Us")
         end
     end
 
@@ -51,9 +50,9 @@ describe "Static pages >" do
             expect(page).to have_content("Help")
         end
 
-            it "should have the title \'Yelp | Help\'" do
+       it "should have the base title" do
             visit "/static_pages/help"
-            expect(page).to have_title("#{base_title}Help")
+            expect(page).to have_title("Yelp | Help")
         end
     end
 end
