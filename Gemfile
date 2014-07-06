@@ -52,7 +52,7 @@ group :test, :development do
 	gem 'capybara'
 	gem 'debugger'
 	gem 'launchy'
-    # gem 'rspec-collection_matchers'
+    gem 'rspec-collection_matchers'
 end
 
 group :development do
