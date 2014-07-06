@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "Static pages >" do
 
-    let(:base_title) {"Yelp | "}
+    # let(:base_title) {"Yelp"}
 
 	describe "Home page: " do
 
