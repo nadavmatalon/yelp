@@ -52,6 +52,7 @@ group :test, :development do
 	gem 'capybara'
 	gem 'debugger'
 	gem 'launchy'
+	gem 'pry-rails'
     gem 'rspec-collection_matchers'
 end
 
