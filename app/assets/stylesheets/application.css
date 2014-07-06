@@ -13,3 +13,30 @@
  *= require_tree .
  *= require_self
  */
+
+/*
+use $ for setting variables:
+
+$selected color: #f55;
+
+background: $selected_color;
+
+
+use @extend to extend style of one element to another:
+
+.element {
+	background: $selected_color;
+	color: #fff;
+	font-weight: bold;
+	padding: 10px;
+	display: inline-block;
+ 	text-decoration: none;
+}
+
+.another_element {
+  	@extend .element;
+}
+
+*/
+
+
