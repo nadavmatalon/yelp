@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.1.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.2'
@@ -12,7 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer',  platforms: :ruby
+# gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -20,13 +21,6 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0',          group: :doc
-
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
-
-gem 'devise'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -40,10 +34,40 @@ gem 'devise'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-group :development, :test  do
+# Devise is a flexible authentication solution for Rails based on Warden
+gem 'devise'
+
+group :doc do
+	# bundle exec rake doc:rails generates the API under doc/api.
+	gem 'sdoc', '~> 0.4.0'
+end
+
+group :test do
+	# a tool for writing automated tests of websites. 
+	# gem 'selenium-webdriver'
+end
+
+group :test, :development do
 	gem 'rspec-rails'
 	gem 'capybara'
+	gem 'debugger'
+	gem 'launchy'
     # gem 'rspec-collection_matchers'
 end
+
+group :development do
+	# Spring speeds up development by keeping your application running 
+	# in the background. Read more: https://github.com/rails/spring
+	gem 'spring'
+end
+
+group :production do
+	# needed for static assets in Heroku deployment
+	# gem 'rails_12factor'
+end
+
+
+
+
 
 
