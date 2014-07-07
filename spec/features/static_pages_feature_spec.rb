@@ -2,57 +2,57 @@ require 'spec_helper'
 
 describe "Static pages >" do
 
-    # let(:base_title) {"Yelp"}
+    subject { page }
 
 	describe "Home page: " do
 
+        before (:each) { visit root_path }
+
 		it "should have the content \'Home\'" do
-			visit "/static_pages/home"
-			expect(page).to have_content("Home")
+			should have_content("Home")
 		end
 
-        it "should have the base title" do
-            visit "/static_pages/home"
-            expect(page).to have_title("Yelp | Home")
+        it "should have the base and page title" do
+            should have_title("Yelp | Home")
         end
     end
 	
 	describe "About page" do
 
+        before (:each) { visit about_path }
+
     	it "should have the content \'About Us\'" do
-    		visit "/static_pages/about"
-    		expect(page).to have_content("About Us")
+    		should have_content("About Us")
     	end
 
-        it "should have the base title" do
-            visit "/static_pages/about"
-            expect(page).to have_title("Yelp | About Us")
+        it "should have the base and page title" do
+            should have_title("Yelp | About Us")
         end
     end
 
    describe "Contact page" do
 
+        before (:each) { visit contact_path }
+
         it "should have the content \'Contact Us\'" do
-            visit "/static_pages/contact"
-            expect(page).to have_content("Contact Us")
+            should have_content("Contact Us")
         end
 
-       it "should have the base title" do
-            visit "/static_pages/contact"
-            expect(page).to have_title("Yelp | Contact Us")
+       it "should have the base and page title" do
+            should have_title("Yelp | Contact Us")
         end
     end
 
     describe "Help page" do
 
+        before (:each) { visit help_path }
+
         it "should have the content \'Help\'" do
-            visit "/static_pages/help"
-            expect(page).to have_content("Help")
+            should have_content("Help")
         end
 
-       it "should have the base title" do
-            visit "/static_pages/help"
-            expect(page).to have_title("Yelp | Help")
+       it "should have the base and page title" do
+            should have_title("Yelp | Help")
         end
     end
 end
