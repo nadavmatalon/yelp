@@ -64,7 +64,7 @@ end
 
 group :production do
 	# needed for static assets in Heroku deployment
-	# gem 'rails_12factor'
+	gem 'rails_12factor'
 end
 
 

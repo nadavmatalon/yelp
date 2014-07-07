@@ -15,4 +15,17 @@
 /log/*.log
 /tmp
 
+# Ignore the secrets file.
+config/secrets.yml
+
+
+# Ignore other unneeded files.
+doc/
+*.swp
+*~
+.project
+.DS_Store
+.idea
+.secret
+
 
