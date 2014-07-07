@@ -12,6 +12,10 @@ describe "Static pages >" do
 			should have_content("Home")
 		end
 
+        it "should have the selector h1 correct text" do
+            should have_selector('h1', text: 'Home')
+        end
+
         it "should have the base and page title" do
             should have_title("Yelp | Home")
         end
@@ -24,6 +28,10 @@ describe "Static pages >" do
     	it "should have the content \'About Us\'" do
     		should have_content("About Us")
     	end
+
+        it "should have the selector h1 correct text" do
+            should have_selector('h1', text: 'About Us')
+        end
 
         it "should have the base and page title" do
             should have_title("Yelp | About Us")
@@ -38,6 +46,10 @@ describe "Static pages >" do
             should have_content("Contact Us")
         end
 
+        it "should have the selector h1 correct text" do
+            should have_selector('h1', text: 'Contact Us')
+        end
+
        it "should have the base and page title" do
             should have_title("Yelp | Contact Us")
         end
@@ -49,6 +61,10 @@ describe "Static pages >" do
 
         it "should have the content \'Help\'" do
             should have_content("Help")
+        end
+
+        it "should have the selector h1 correct text" do
+            should have_selector('h1', text: 'Help')
         end
 
        it "should have the base and page title" do
