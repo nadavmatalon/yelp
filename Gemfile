@@ -37,6 +37,16 @@ gem 'jbuilder', '~> 2.0'
 # Devise is a flexible authentication solution for Rails based on Warden
 gem 'devise'
 
+# https://github.com/twbs/bootstrap-sass
+gem 'bootstrap-sass', '~> 3.2.0'
+
+# https://github.com/ai/autoprefixer-rails
+gem "autoprefixer-rails"
+
+# https://github.com/sstephenson/sprockets
+# gem 'sprockets', '~> 3.0'
+
+
 group :doc do
 	# bundle exec rake doc:rails generates the API under doc/api.
 	gem 'sdoc', '~> 0.4.0'
