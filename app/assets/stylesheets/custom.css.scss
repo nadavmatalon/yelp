@@ -1,9 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/*body {
-	margin-top: 150px;
-}*/
 
 /* universal */
 
@@ -30,3 +27,12 @@ textarea {
 .center h1 {
   margin-bottom: 10px;
 }
+
+#logo {
+	color: rgb(200, 200, 200);
+}
+
+#nav-button {
+	color: rgb(200, 200, 200);
+}
+
