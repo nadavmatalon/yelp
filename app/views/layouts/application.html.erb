@@ -5,32 +5,16 @@
   		<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
   		<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   		<%= csrf_meta_tags %>
-  		<!--[if lt IE 9]>
-    		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    	<![endif]-->
+        <%= render 'layouts/shim' %>
 	</head>
 	<body>
-<!-- 		<h1>Yelp</h1><br/>
- -->
-<!-- 	<p class="notice"><%= notice %></p>
-		<p class="alert"><%= alert %></p>
- -->
-		<header class="navbar navbar-fixed-top navbar-inverse">
-			<div class="navbar-inner">
-				<div class="container">
-					<%= link_to "sample app", '#', id: "logo" %>
-					<nav>
-						<ul class="nav navbar-nav pull-right">
-							<li><%= link_to "Home",    '#', id: "nav-button"%></li>
-							<li><%= link_to "Help",    '#', id: "nav-button"%></li>
-							<li><%= link_to "Sign in", '#', id: "nav-button"%></li>
-						</ul>
-					</nav>
-				</div>
-			</div>
-		</header>
+<!--    <h1>Yelp</h1><br/>
+     	<p class="notice"><%= notice %></p>
+		<p class="alert"><%= alert %></p> -->
+        <%= render 'layouts/header' %>
 		<div class="container">		
 			<%= yield %>
+            <%= render 'layouts/footer' %>
 		</div>
 	</body>
 </html>
