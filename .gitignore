@@ -16,8 +16,8 @@
 /tmp
 
 # Ignore the secrets file.
-config/secrets.yml
-
+/config/secrets.yml
+/config/database.yml
 
 # Ignore other unneeded files.
 doc/

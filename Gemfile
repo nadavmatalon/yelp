@@ -44,7 +44,7 @@ gem 'bootstrap-sass', '~> 3.2.0'
 gem "autoprefixer-rails"
 
 # https://github.com/sstephenson/sprockets
-# gem 'sprockets', '~> 3.0'
+gem 'sprockets'
 
 
 group :doc do
