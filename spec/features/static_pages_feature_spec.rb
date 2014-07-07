@@ -71,5 +71,41 @@ describe "Static pages >" do
             should have_title("Yelp | Help")
         end
     end
+
+
+    describe "Static pages" do
+
+        before (:each) { visit root_path }
+
+        it "should have the right link to Home" do
+            click_link "Home"
+            should have_title('Yelp | Home')
+        end
+
+        it "should have the right link to About Us" do
+            click_link "About"
+            should have_title('Yelp | About Us')
+        end
+
+        it "should have the right link to Contact Us" do
+            click_link "Contact"
+            should have_title('Yelp | Contact Us')
+        end
+
+        it "should have the right link to Help" do
+            click_link "Help"
+            should have_title('Yelp | Help')
+        end
+
+        it "should have the right link to Sign up Now!" do
+            click_link "Sign up now!"
+            should have_title('Yelp | Sign Up')
+        end
+
+        xit "should have the right link to Sample App" do
+            click_link "Sample App"
+            should have_title('Yelp | Contact Us')
+        end
+    end
 end
 
