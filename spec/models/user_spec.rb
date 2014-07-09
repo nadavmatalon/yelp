@@ -2,9 +2,12 @@ require 'rails_helper'
 
 describe User do
 
-  before (:each) { @user = User.create(name: "John Apple", email: "ja@gmail.com") }
+  	before (:each) { @user = User.create(name: "John Apple", email: "ja@gmail.com",
+  				   password: "foobar", password_confirmation: "foobar") }
 
-  subject { @user }
+	let(:found_user) { User.find_by(email: @user.email) }
+
+  	subject { @user }
 
   	it "should have a name" do
  		expect(@user).to respond_to(:name)
@@ -20,13 +23,18 @@ describe User do
  		expect(@user).to respond_to(:password_digest)
    	end
 
-	# it "should have a password" do
- # 		expect(@user).to respond_to(:password)
- #   	end
+	it "should have a password" do
+ 		expect(@user).to respond_to(:password)
+   	end
 
-   # 		it "should have a password confirmation" do
- 		# expect(@user).to respond_to(:password_confirmation)
-   # 	end
+   	it "should have a password confirmation" do
+ 		expect(@user).to respond_to(:password_confirmation)
+   	end
+
+  	it "should have a " do
+ 		expect(@user).to respond_to(:password_confirmation)
+   	end
+
 
 	describe "name" do
 
@@ -83,7 +91,29 @@ describe User do
       		expect(@user.email).to eq "ja@gmail.com"
     	end
   	end
+
+	describe "password and password confirmation" do
+ 
+		before (:each) { @user = User.create(name: "Example User", email: "user@example.com",
+            	         password: " ", password_confirmation: " ")}
+
+		it "cannot be blank" do
+  			expect(@user).not_to be_valid
+  		end
+
+  		it "must match" do
+  			@user.password, @user.password_confirmation = "Apple", "Pear"
+  			expect(@user).not_to be_valid
+  		end
+
+  		it "cannot be too short" do
+  			@user.password, @user.password_confirmation = "a", "a"
+  			expect(@user).not_to be_valid
+  		end
+	end
 end
+
+
 
 
 
