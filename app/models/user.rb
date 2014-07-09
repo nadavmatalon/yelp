@@ -10,4 +10,8 @@ class User < ActiveRecord::Base
 	
 	has_many :restaurants
 
+	def to_param
+		name
+	end
+	
 end

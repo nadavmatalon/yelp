@@ -16,6 +16,18 @@ describe User do
  		expect(@user.email).to eq "ja@gmail.com"
  	end
 
+ 	it "should have a password diagest" do
+ 		expect(@user).to respond_to(:password_digest)
+   	end
+
+	# it "should have a password" do
+ # 		expect(@user).to respond_to(:password)
+ #   	end
+
+   # 		it "should have a password confirmation" do
+ 		# expect(@user).to respond_to(:password_confirmation)
+   # 	end
+
 	describe "name" do
 
  		it "cannot be blank" do

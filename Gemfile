@@ -22,20 +22,17 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
 # Use unicorn as the app server
 # gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# Use debugger
-# gem 'debugger', group: [:development, :test]
-
-# Devise is a flexible authentication solution for Rails based on Warden
+# https://github.com/plataformatec/devise
 gem 'devise'
+
+# https://github.com/codahale/bcrypt-ruby
+gem 'bcrypt'
 
 # https://github.com/twbs/bootstrap-sass
 gem 'bootstrap-sass', '~> 3.2.0'
