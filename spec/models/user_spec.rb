@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe User do
 
-  before (:each) { @user = User.new(name: "John Apple", email: "ja@gmail.com") }
+  before (:each) { @user = User.create(name: "John Apple", email: "ja@gmail.com") }
 
   subject { @user }
 
@@ -55,7 +55,6 @@ describe User do
 
  		it "must be unique" do
 	      	user_with_same_email = @user.dup
-	      	@user.save
       		user_with_same_email.save
       		expect(user_with_same_email).not_to be_valid
     	end
@@ -63,14 +62,12 @@ describe User do
     	it "must is not case sensitive" do
 	      	user_with_same_email = @user.dup
 	      	user_with_same_email.email = @user.email.upcase
-	      	@user.save
       		user_with_same_email.save
       		expect(user_with_same_email).not_to be_valid
     	end
 
     	it "will be changed to lowercase automatically before user is saved" do
-  			@user.email = "JA@gmail.com"
-	      	@user.save
+  			@user.update_attribute(:email, "JA@gmail.com")
       		expect(@user.email).to eq "ja@gmail.com"
     	end
   	end
