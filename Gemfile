@@ -46,6 +46,9 @@ gem "autoprefixer-rails"
 # https://github.com/sstephenson/sprockets
 gem 'sprockets'
 
+# https://github.com/codahale/bcrypt-ruby
+gem 'bcrypt-ruby'
+
 
 group :doc do
 	# bundle exec rake doc:rails generates the API under doc/api.

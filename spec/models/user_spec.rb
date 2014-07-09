@@ -16,7 +16,6 @@ describe User do
  		expect(@user.email).to eq "ja@gmail.com"
  	end
 
-
 	describe "name" do
 
  		it "cannot be blank" do
@@ -58,7 +57,7 @@ describe User do
 	      	user_with_same_email = @user.dup
 	      	@user.save
       		user_with_same_email.save
-      		 expect(user_with_same_email).not_to be_valid
+      		expect(user_with_same_email).not_to be_valid
     	end
 
     	it "must is not case sensitive" do
@@ -66,7 +65,18 @@ describe User do
 	      	user_with_same_email.email = @user.email.upcase
 	      	@user.save
       		user_with_same_email.save
-      		 expect(user_with_same_email).not_to be_valid
+      		expect(user_with_same_email).not_to be_valid
+    	end
+
+    	it "will be changed to lowercase automatically before user is saved" do
+  			@user.email = "JA@gmail.com"
+	      	@user.save
+      		expect(@user.email).to eq "ja@gmail.com"
     	end
   	end
 end
+
+
+
+
+
