@@ -55,6 +55,9 @@ end
 group :test do
 	# a tool for writing automated tests of websites. 
 	# gem 'selenium-webdriver'
+
+	# https://github.com/thoughtbot/factory_girl_rails	
+	gem 'factory_girl_rails'
 end
 
 group :test, :development do
@@ -64,6 +67,8 @@ group :test, :development do
 	gem 'launchy'
 	gem 'pry-rails'
     gem 'rspec-collection_matchers'
+    gem 'poltergeist'
+    gem 'database_cleaner'
 end
 
 group :development do
