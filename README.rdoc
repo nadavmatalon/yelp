@@ -1,28 +1,13 @@
-== README
+#Yelp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+###Deprecated
 
-Things you may want to cover:
+This repo contains a first draft of a Rails project.
 
-* Ruby version
+It was created during week 7 of the course at 
+[Makers Academy](http://www.makersacademy.com/) as a way of practicing 
+the workflow and creation of various elements in the 
+[Ruby on Rails](http://rubyonrails.org/) 
+environment while following the first two chapters of Michael Hartl's 
+[Ruby On Rails Tutorial](https://www.railstutorial.org/)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
